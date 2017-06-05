@@ -32,14 +32,12 @@ def f(params):
 
 random_state = 11
 n_jobs = 8
-max_evals = 300
+max_evals = 50
 criterion = ['gini', 'entropy']
 
 space4rf = {
-    'features': hp.choice('features', range(4000, 30000)),
-    'n_estimators': hp.choice('n_estimators', range(100,800)),
-    'max_depth': hp.choice('max_depth', range(10, 50)),
-    'max_features': hp.choice('max_features', range(1000, 4000)),
+    'features': hp.choice('features', range(4000, 20000)),
+    'n_estimators': hp.choice('n_estimators', range(100,600)),
     'criterion': hp.choice('criterion', ["gini", "entropy"]),
     'random_state': random_state,
     'n_jobs': n_jobs
