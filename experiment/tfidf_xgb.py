@@ -34,7 +34,7 @@ def f(params):
 
 random_state = 27
 n_jobs = 8
-max_evals = 1
+max_evals = 100
 penalty = ['l1', 'l2']
 
 space4xgb = {
