@@ -1,0 +1,9 @@
+05.06
+
+1) LogisticRegression
+    accuracy = 0.899533859086
+    predict: res_lr_0506.csv
+
+2) RandomForest
+    accuracy = 0.9
+    predict: res_rf_0506.csv
