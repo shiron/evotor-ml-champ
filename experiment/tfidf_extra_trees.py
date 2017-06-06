@@ -5,7 +5,6 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import cross_val_score
 from sklearn.ensemble import ExtraTreesClassifier
-from xgboost import XGBClassifier
 
 train_data = pd.read_csv('./../data/lem_train_data.csv', sep=';', header=0)
 test_data = pd.read_csv('./../data/lem_test_data.csv', sep=';', header=0)
