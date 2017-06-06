@@ -59,10 +59,9 @@ best = ExtraTreesClassifier(n_estimators=best['n_estimators'], criterion=criteri
 print 'Score of best: '
 print cross_val_score(best, cv_train_data, train_data['GROUP_ID'], cv=3, scoring='accuracy').mean()
 
-clf = ExtraTreesClassifier(n_estimators=best['n_estimators'], criterion=criterion[best['criterion']],
-                            random_state=random_state, n_jobs=n_jobs)
-clf.fit(cv_train_data, train_data['GROUP_ID'])
 
-predict_clf = clf.predict(cv_test_data)
+best.fit(cv_train_data, train_data['GROUP_ID'])
+
+predict_clf = best.predict(cv_test_data)
 test_data['GROUP_ID'] = predict_clf
 test_data[['id', 'GROUP_ID']].to_csv('./../result/res_et_0606.csv', sep=',', header=True, index=False)
