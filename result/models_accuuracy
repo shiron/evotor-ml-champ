@@ -3,7 +3,21 @@
 1) LogisticRegression
     accuracy = 0.899533859086
     predict: res_lr_0506.csv
+    features: tfidf
 
 2) RandomForest
     accuracy = 0.9
     predict: res_rf_0506.csv
+    features: tfidf
+
+06.06
+
+1) MultinomialNB
+    accuracy = 0.899677842294
+    predict: res_nb_0606.csv
+    features: tfidf 12886
+
+2) XgbClassifier
+    accuracy = 0.877855578463
+    predict = res_xgb_0606.csv
+    features: tfidf 12000
