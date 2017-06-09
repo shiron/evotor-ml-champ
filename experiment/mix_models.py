@@ -12,8 +12,12 @@ for f in ['res_nb_0606.csv', 'res_rf_0506.csv', 'res_xgb_0606.csv']:
 
 print predicts.head()
 
-# обучение дерева
+# голосование максимумом
 
-clf = RandomForestClassifier(n_estimators=200, random_state=44)
+def max_c(x):
+    return x.value_counts().idxmax()
 
-cross_val_score(clf, predicts[['GROUP_ID', 'res_nb_0606.csv', 'res_rf_0506.csv', 'res_xgb_0606.csv']], predicts.)
+predicts['result'] = predicts.apply(max_c, axis=1)
+
+print predicts.head()
+predicts[['id', 'result']].to_csv('./../result/res_all_0606.csv', sep=',', header=('id', 'GROUP_ID'), index=False)

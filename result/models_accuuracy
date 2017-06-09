@@ -12,12 +12,26 @@
 
 06.06
 
-1) MultinomialNB
+3) MultinomialNB
     accuracy = 0.899677842294
     predict: res_nb_0606.csv
     features: tfidf 12886
 
-2) XgbClassifier
+4) XgbClassifier
     accuracy = 0.877855578463
     predict = res_xgb_0606.csv
     features: tfidf 12000
+
+5) Микс. моделей 1,2,3,4
+    обычное голосование
+    оценка на LB: 0.912818
+
+09.06
+
+6) MultinomialNB
+    accuracy = 0.905853931959
+    predict_test: res_nb_test_0906.csv
+    predict_train: res_nb_train_0906.csv
+    features: cv 17752
+
+7)
